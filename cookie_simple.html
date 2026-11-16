@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Demo</title>
+</head>
+<body>
+  <h1>Cookie Demo</h1>
+  <p id="output"></p>
+
+  <script>
+    //Display the cookie first (empty on a first visit)
+    document.getElementById("output").innerHTML = "Cookie: " + document.cookie;
+
+    //Set the cookie
+    var d = new Date();
+    d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+    document.cookie = "username=John Doe; expires=" + d.toUTCString() + "; path=/";
+  </script>
+</body>
+</html>
